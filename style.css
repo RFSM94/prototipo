@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  #defaultCanvas0 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+
+  #myCanvas {
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    height: auto;
+    box-sizing: border-box;
+}
+  
+  @font-face {
+    font-family: 'prophet-extrabold';
+    src: url('./font/ABCProphetEdu-Extrabold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'prophet-light';
+    src: url('./font/ABCProphetEdu-Light.woff') format('woff');
+  }
+
+/*BODY-TEXT*/
+
+  body {
+    background: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: prophet-light, Arial, Helvetica, sans-serif;
+    text-align: left;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .highlight {
+    color: rgb(43, 0, 255);
+    font-family: prophet-extrabold, Arial, Helvetica, sans-serif;
+  }
+
+  .body-text {
+    font-family: prophet-extrabold, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .bibliography {
+    position: relative;
+    font-weight: prophet-Light, sans-serif;
+    font-size: 12px;
+    color: white;
+  }
+
+ /*HEADER*/
+
+ header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-text2 {
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    word-spacing: 50px;
+    color: white;
+    background-color:rgb(47, 0, 255);
+    animation: marquee 70s linear infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .header-container2 {
+    background-color:rgb(47, 0, 255);
+    width: 100%;
+  }
+
+  /*FOOTER*/
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .footer-container1 {
+    background-color:rgb(47, 0, 255);
+    width: 100%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer-text {
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    word-spacing: 50px;
+    color: white;
+    animation: marquee 50s linear infinite;
+    animation-iteration-count: infinite;
+  }
+
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .body-text {
+      font-size: 40px;
+    }
+
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; /* left column 1 part, middle column 2 parts, right column 1 part */
+    grid-gap: 5px; /* add some space between the columns */
+    max-width: 100%; /* make sure the container doesn't exceed the width of the viewport */
+    margin: 0 auto; /* center the container horizontally */
+  }
+
+  .container div {  
+overflow: auto;
+  }
+  
+  .column {
+    box-sizing: border-box; /* make sure padding doesn't affect column size */
+  }
+
+  .left .right {
+    border: 1px solid #ccc;
+    overflow: auto;
+    padding: 20px; /* add some padding inside each column */
+    color: black;
+  }
+
+  .middle {
+  overflow: auto;
+  text-align: center;
+  position: relative;
+  z-index: -2;
+}
+
+  h2 {
+    padding-top: 150px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+
+  .project-description {
+    color: black;
+    font-size: 18px;
+  }
+
+  /*Remove the scrollbar from Chrome, Safari, Edge and IE*/
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+* {
+-ms-overflow-style: none !important;
+}
+
+.scroll-container {
+  animation: scroll 100s linear infinite;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.paragraphs-container p {
+  margin: 0;
+  padding: 1rem;
+  color: aliceblue;
+}
+
+
+
+.left-column {
+  color: aliceblue;
+  padding: 20px; /* add some padding inside the column */
+  box-sizing: border-box; /* make sure padding doesn't affect column size */
+  height: 100vh; /* set a fixed height for the column */
+  overflow-y: scroll; /* add vertical scroll */
+}
+
+img {
+  max-width: 125vh;
+  max-height: 100vh;
+}
+
+
+.canvas-container {
+  position: absolute;
+  left: 33.33%;
+  right: 33.33%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+}
